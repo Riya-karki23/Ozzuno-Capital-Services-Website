@@ -4,11 +4,11 @@ import Home from './pages/Home'
 import CaseStudy from './pages/CaseStudy'
 import Footer from './pages/Footer'
 import About from './pages/About'
-import Cards from './pages/Cards'
-import CapitalMarkets from './pages/CapitalMarkets'
-import DebtStructuredFinance from './pages/DebtStructuredFinance'
-import MAStrategicExits from './pages/MAStrategicExits'
-import PrivateCapitalGlobalLiquidity from './pages/PrivateCapitalGlobalLiquidity'
+import Level2 from './pages/Level2'
+import Level3 from './pages/Level3'
+import Level4 from './pages/Level4'
+
+
 
 const App = () => {
   return (
@@ -17,26 +17,27 @@ const App = () => {
        <section id="home">
         <Home />
       </section>
+
+     
       
-      <section id="about">
+     <section id="about">
       <About />
       </section>
 
-
+  
        <section id="services">
-      <Cards />
+      <Level2 />
       </section>
 
-      <CapitalMarkets/>
-      <DebtStructuredFinance/>
-      <MAStrategicExits/>
-      <PrivateCapitalGlobalLiquidity/>
+      <Level3/>
+      <Level4/>
+      
       <section id="case">
       <CaseStudy />
       </section>
      <section id="contact">
       <Footer />
-      </section>
+      </section> 
     </div>
   )
 }
