@@ -1,6 +1,5 @@
 // src/pages/HomeHero.jsx
 import React from "react";
-import heroBg from "../assets/web-bg.jpg";
 import logoImg from "../assets/logo-img.png";
 
 export default function HomeHero() {
