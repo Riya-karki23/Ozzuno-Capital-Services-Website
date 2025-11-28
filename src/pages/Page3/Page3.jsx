@@ -104,14 +104,15 @@ export default function LevelThreeCAG() {
           <div className="grid gap-6 md:grid-cols-2">
             {sections.map((sec, index) => (
               <Link
-                key={sec.id}
-                to={sec.path}
-                className="group relative rounded-3xl bg-white shadow-md border border-slate-200 
-                           p-6 md:p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl 
-                           hover:border-sky-200"
-              >
+  key={sec.id}
+  to={sec.path}
+  className="group relative rounded-3xl bg-white shadow-md border border-slate-200 
+             p-6 md:p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl 
+             hover:border-sky-200 focus:outline-none overflow-hidden"
+>
+
                 {/* subtle gradient edge to make it feel like a “module” */}
-                <div className="pointer-events-none absolute inset-y-0 left-0 w-1 rounded-l-3xl bg-gradient-to-b from-sky-500 via-cyan-500 to-emerald-500" />
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-1 rounded-l-3xl bg-gradient-to-b from-sky-500 via-cyan-500 to-emerald-500 overflow-hidden" />
 
                 <div className="pl-3">
                   <p className="text-[10px] uppercase tracking-[0.25em] text-slate-500">
