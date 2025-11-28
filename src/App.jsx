@@ -3,7 +3,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Home from "./pages/Home";
-import Page1 from "./pages/Page1/page1";
+import Page1 from "./pages/Page1/Page1";
 import SubPage1 from "./pages/Page1/SubPage1";
 import SubPage2 from "./pages/Page1/SubPage2";
 import SubPage3 from "./pages/Page1/SubPage3";
