@@ -121,9 +121,9 @@ const App = () => {
                 <Home />
               </section>
 
-              <section id="page1">
+      
                 <Page1 />
-              </section>
+              
               <Page2/>
               <Page3/>
               <Page4/>

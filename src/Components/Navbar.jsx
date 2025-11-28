@@ -25,7 +25,7 @@ export default function Navbar() {
   />
 </div>
 
-        <ul className="hidden md:flex gap-8 text-gray-700 font-medium">
+        {/* <ul className="hidden md:flex gap-8 text-gray-700 font-medium">
           <li onClick={() => scrollToSection("home")}>Home</li>
           <li onClick={() => scrollToSection("about")}>About</li>
           <li onClick={() => scrollToSection("services")}>Services</li>
@@ -38,10 +38,10 @@ export default function Navbar() {
           onClick={() => setOpen(!open)}
         >
           ☰
-        </button>
+        </button> */}
       </div>
 
-      {open && (
+      {/* {open && (
         <ul className="md:hidden bg-white border-t px-6 py-4 space-y-4 font-medium text-gray-700">
           <li onClick={() => scrollToSection("home")}>Home</li>
           <li onClick={() => scrollToSection("about ")}>About</li>
@@ -49,7 +49,7 @@ export default function Navbar() {
           <li onClick={() => scrollToSection("case")}>Case Study</li>
           <li onClick={() => scrollToSection("contact")}>Contact</li>
         </ul>
-      )}
+      )} */}
     </nav>
   );
 }
