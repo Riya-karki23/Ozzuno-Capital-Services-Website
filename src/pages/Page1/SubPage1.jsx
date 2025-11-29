@@ -37,18 +37,7 @@ export default function FirmAbout() {
               </p>
             </div>
 
-            <div className="flex-1 w-full">
-              <div className="w-full rounded-2xl border border-dashed border-slate-300 bg-slate-50/80 p-4">
-                <p className="text-[11px] font-medium uppercase tracking-[0.25em] text-slate-500">
-                  ORG CHART · PLACEHOLDER
-                </p>
-                <p className="mt-2 text-xs text-slate-500">
-                  Insert corporate org chart graphic here – Executive Chairman,
-                  Apex Council, Risk Architecture, and Capital Markets grid.
-                </p>
-                <div className="mt-4 h-28 rounded-xl bg-gradient-to-tr from-slate-200 via-slate-100 to-white shadow-inner" />
-              </div>
-            </div>
+            
           </div>
         </section>
 

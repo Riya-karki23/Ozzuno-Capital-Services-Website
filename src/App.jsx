@@ -17,6 +17,7 @@ import IbdProspectusDrafting from "./pages/Page2/IbdProspectusDrafting";
 import IbdDebt from "./pages/Page2/IbdDebt";
 import IbdLiabilityOptimization from "./pages/Page2/IbdLiabilityOptimization";
 import IbdDistressedDebtRestructuring from "./pages/Page2/IbdDistressedDebtRestructuring";
+import ScrollToTop from "./Components/ScrollToTop";
 
 // page3
 import  Page3 from "./pages/Page3/Page3";
@@ -105,11 +106,13 @@ import Page14 from "./pages/Page14/Page14";
 import Page15 from "./pages/Page15/Page15";
 import Page16 from "./pages/Page16/Page16";
 import Footer from "./webpages/Footer";
+import CookieBanner from "./Components/CookieBanner";
+import ChatWidget from "./Components/ChatWidget";
 
 const App = () => {
   return (
     <div>
-      
+       <ScrollToTop />
 
       <Routes>
         <Route
@@ -139,6 +142,8 @@ const App = () => {
               <Page15/>
               <Page16/>
               <Footer />
+               <CookieBanner />
+               <ChatWidget />
 
             </>
           }
