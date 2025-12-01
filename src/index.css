@@ -9,3 +9,29 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;    /* Firefox */
 }
+
+
+.footer-link {
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.25s ease;
+}
+
+.footer-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0%;
+  height: 1px;
+  background: rgb(125 211 252); /* sky-300 */
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+  color: rgb(125 211 252); /* sky-300 */
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
