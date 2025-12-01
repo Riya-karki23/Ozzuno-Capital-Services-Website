@@ -14,10 +14,18 @@ export default function ChatWidget() {
   const [input, setInput] = useState("");
   const messagesEndRef = useRef(null);
 
-  // Auto open after page load
+  // Auto open ONLY first time ever (per browser)
   useEffect(() => {
-    const timer = setTimeout(() => setIsOpen(true), 1200);
-    return () => clearTimeout(timer);
+    const seen = localStorage.getItem("ozzunoChatSeen");
+
+    if (!seen) {
+      const timer = setTimeout(() => {
+        setIsOpen(true);
+        localStorage.setItem("ozzunoChatSeen", "yes");
+      }, 1200);
+
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   // Scroll to bottom on new message
@@ -51,7 +59,6 @@ export default function ChatWidget() {
   const botReply = (userText) => {
     const t = userText.toLowerCase();
 
-    // contact us flow
     if (
       t.includes("contact") ||
       t.includes("reach") ||
@@ -101,7 +108,6 @@ export default function ChatWidget() {
     appendMessage(text, "user");
     setInput("");
 
-    // if we are waiting for email, treat this message as email
     if (awaitingEmail) {
       const isEmail = /\S+@\S+\.\S+/.test(text);
       if (isEmail) {
@@ -154,10 +160,9 @@ export default function ChatWidget() {
         <div className="flex items-center justify-between px-4 py-3 border-b border-slate-800 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950">
           <div className="flex items-center gap-2.5">
             <div className="relative">
-              <div className="w-9 h-9 rounded-2xl bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-sm font-bold shadow-lg">
+              <div className="w-9 h-9 rounded-2xl hover:cursor-pointer bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-sm font-bold shadow-lg">
                 Ω
               </div>
-              {/* online dot */}
               <span className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-emerald-400 border border-slate-950 shadow-sm" />
             </div>
             <div className="flex flex-col">
@@ -171,10 +176,10 @@ export default function ChatWidget() {
           </div>
           <button
             onClick={closeChat}
-            className="text-slate-400 hover:text-slate-100 hover:bg-slate-800/70 rounded-full w-7 h-7 flex items-center justify-center text-base"
-          >
-            ×
-          </button>
+           className="absolute hover:cursor-pointer right-3 top-3 inline-flex h-9 w-9  items-center justify-center rounded-full bg-slate-900/80 text-slate-300 text-xs hover:bg-slate-800 hover:text-white border border-white/10 transition"
+            >
+              ✕
+            </button>
         </div>
 
         {/* Messages */}
@@ -244,16 +249,19 @@ export default function ChatWidget() {
         </div>
       </div>
 
-      {/* FLOATING ICON (when closed) */}
+      {/* FLOATING CHAT ICON (same size as contact) */}
       <button
         onClick={openChat}
         className={`
           fixed bottom-4 right-4 md:bottom-6 md:right-6 z-40
-          w-14 h-14 rounded-full
-          bg-gradient-to-br from-emerald-400 to-sky-500
-          shadow-[0_12px_35px_rgba(0,0,0,0.45)]
-          flex items-center justify-center text-2xl text-white
+          w-12 h-12
+          rounded-full
+          bg-slate-950/95
+          shadow-[0_10px_30px_rgba(0,0,0,0.55)]
+          flex items-center justify-center
+          text-white
           transition-all duration-200
+          border border-emerald-400/70
           ${
             isOpen
               ? "opacity-0 scale-90 pointer-events-none"
@@ -262,7 +270,9 @@ export default function ChatWidget() {
         `}
         aria-label="Open chat"
       >
-        <span className="animate-pulse text-[22px]">💬</span>
+        <div className="w-8 h-8 hover:cursor-pointer rounded-full bg-gradient-to-br from-emerald-400 via-cyan-400 to-sky-500 flex items-center justify-center text-[18px] shadow-[0_0_14px_rgba(45,212,191,0.8)]">
+          💬
+        </div>
       </button>
     </>
   );

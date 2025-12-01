@@ -43,19 +43,7 @@ export default function FirmGlobalNodes() {
               </ul>
             </div>
 
-            <div className="flex-1 w-full">
-              <div className="w-full rounded-2xl border border-dashed border-slate-300 bg-slate-50/80 p-4">
-                <p className="text-[11px] font-medium uppercase tracking-[0.25em] text-slate-500">
-                  MAP / NETWORK VISUAL
-                </p>
-                <p className="mt-2 text-xs text-slate-500">
-                  Insert world / India map or network diagram here showcasing
-                  domestic HQ, satellite offices, offshore partners, and credit
-                  lines.
-                </p>
-                <div className="mt-4 h-40 rounded-xl bg-gradient-to-tr from-slate-200 via-slate-100 to-white shadow-inner" />
-              </div>
-            </div>
+           
           </div>
         </section>
 

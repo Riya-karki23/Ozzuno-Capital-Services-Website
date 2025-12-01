@@ -108,11 +108,28 @@ import Page16 from "./pages/Page16/Page16";
 import Footer from "./webpages/Footer";
 import CookieBanner from "./Components/CookieBanner";
 import ChatWidget from "./Components/ChatWidget";
+import ContactModal from "./Components/ContactModal";
+
+// policies
+
+import Policy1 from "./Policies/Policy1";
+import Policy2 from "./Policies/Policy2";
+import Policy3 from "./Policies/Policy3";
+import Policy4 from "./Policies/Policy4";
+import Policy5 from "./Policies/Policy5";
+import Policy6 from "./Policies/Policy6";
+import Policy7 from "./Policies/Policy7";
+import Policy8 from "./Policies/Policy8";
+import Policy9 from "./Policies/Policy9";
+import Policy10 from "./Policies/Policy10";
+import Policy11 from "./Policies/Policy11";
+import Policy12 from "./Policies/Policy12";
 
 const App = () => {
   return (
     <div>
        <ScrollToTop />
+       
 
       <Routes>
         <Route
@@ -144,6 +161,8 @@ const App = () => {
               <Footer />
                <CookieBanner />
                <ChatWidget />
+               <ContactModal/>
+              
 
             </>
           }
@@ -244,6 +263,22 @@ const App = () => {
 <Route path="/level11/digital-foundry" element={<Level11DigitalFoundry />} />
 <Route path="/level11/cyber-sovereignty" element={<Level11CyberSovereignty />} />
 <Route path="/level11/fintech-solutions" element={<Level11FintechSolutions />} />
+
+
+{/* policies */}
+<Route path="/policy/termsOfEngagement" element={<Policy1 />} />
+<Route path="/policy/dataSovereignty" element={<Policy2 />} />
+<Route path="/policy/riskDisclosure" element={<Policy3 />} />
+<Route path="/policy/AMLCharter" element={<Policy4 />} />
+<Route path="/policy/VigilMechanism" element={<Policy5 />} />
+<Route path="/policy/CookieProtocol" element={<Policy6 />} />
+<Route path="/policy/LimitationOfLiability" element={<Policy7 />} />
+<Route path="/policy/IntellectualSovereignty" element={<Policy8 />} />
+<Route path="/policy/NonRefundMandate" element={<Policy9 />} />
+<Route path="/policy/ThirdPartyProtocol" element={<Policy10 />} />
+<Route path="/policy/DigitalConductDirective" element={<Policy11 />} />
+<Route path="/policy/EthicalSourcingManifesto" element={<Policy12 />} />
+
       </Routes>
     </div>
   );
