@@ -12,8 +12,7 @@ export default function Navbar({ openContact }) {
     { label: "About", to: "/about" },
     { label: "Services", to: "/services" },
     { label: "White Papers", to: "/whitePapers" },
-
-    { label: "Contact", to:"/contact" }, 
+    { label: "Contact", to: "/contact" },
   ];
 
   // Scroll par hide/show
@@ -57,7 +56,13 @@ export default function Navbar({ openContact }) {
         </div>
 
         {/* Desktop links right */}
-        <ul className="hidden md:flex items-center gap-8 text-xs font-medium">
+        <ul
+          className="
+            hidden md:flex items-center 
+            gap-4 lg:gap-8 
+            text-xs font-medium
+          "
+        >
           {navItems.map((item) => (
             <li key={item.label}>
               {item.action === "openContact" ? (
@@ -69,14 +74,14 @@ export default function Navbar({ openContact }) {
                     text-slate-700
                     relative
                     uppercase
-                    tracking-[0.22em]
-                    text-[14px]
+                    tracking-[0.18em] lg:tracking-[0.22em]
+                    text-[12px] lg:text-[14px]
                     text-slate-300
                     transition-all
                     duration-200
                     pb-1
                     hover:text-white
-                    hover:tracking-[0.26em]
+                    hover:tracking-[0.22em] lg:hover:tracking-[0.26em]
                     after:content-['']
                     after:absolute
                     after:left-1/2
@@ -99,17 +104,17 @@ export default function Navbar({ openContact }) {
                 <Link
                   to={item.to}
                   className="
-                  text-slate-700
+                    text-slate-700
                     relative
                     uppercase
-                    tracking-[0.22em]
-                    text-[14px]
+                    tracking-[0.18em] lg:tracking-[0.22em]
+                    text-[12px] lg:text-[14px]
                     text-slate-300
                     transition-all
                     duration-200
                     pb-1
                     hover:text-white
-                    hover:tracking-[0.26em]
+                    hover:tracking-[0.22em] lg:hover:tracking-[0.26em]
                     after:content-['']
                     after:absolute
                     after:left-1/2
