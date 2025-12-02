@@ -27,9 +27,7 @@ export default function WhitepapersPage() {
 
         {/* Hero */}
         <header className="mb-12">
-          <p className="text-[11px] uppercase tracking-[0.32em] text-emerald-300 mb-3">
-            Level 3 · Proprietary White Papers
-          </p>
+          
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-slate-50 mb-4">
             Gated Intelligence for{" "}
             <span className="text-emerald-300">
