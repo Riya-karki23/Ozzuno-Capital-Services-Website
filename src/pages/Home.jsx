@@ -86,13 +86,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/40" />
 
           {/* 🔹 LOGO ON TOP OF VIDEO */}
-          <div className="absolute top-0 left-38 z-20">
-            <img
-              src={logoImg}
-              alt="Ozzuno logo"
-              className="h-20 w-auto md:h-48"
-            />
-          </div>
+         
 
           {/* HERO TEXT */}
           <div className="relative z-10 max-w-5xl mx-auto h-full flex flex-col justify-center px-6">

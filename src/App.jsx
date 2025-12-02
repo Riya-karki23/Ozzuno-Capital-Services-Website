@@ -1,5 +1,5 @@
 // App.jsx
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Page1 from "./pages/Page1/Page1";
@@ -18,6 +18,8 @@ import IbdDebt from "./pages/Page2/IbdDebt";
 import IbdLiabilityOptimization from "./pages/Page2/IbdLiabilityOptimization";
 import IbdDistressedDebtRestructuring from "./pages/Page2/IbdDistressedDebtRestructuring";
 import ScrollToTop from "./Components/ScrollToTop";
+
+import Layout from "./Layout";
 
 // page3
 import  Page3 from "./pages/Page3/Page3";
@@ -125,13 +127,25 @@ import Policy10 from "./Policies/Policy10";
 import Policy11 from "./Policies/Policy11";
 import Policy12 from "./Policies/Policy12";
 
+import Navbar from "./Components/Navbar";
+import WhitepapersPage from "./pages/WhitePapers/WhitePapersPage";
+import ContactPage from "./Components/ContactPage";
+import Services from "./pages/Services";
+
 const App = () => {
+  const [openContactFromNav, setOpenContactFromNav] = useState(false);
+
+  const handleOpenContact = () => {
+    setOpenContactFromNav(true);
+  };
   return (
     <div>
+       <Navbar openContact={handleOpenContact} />
        <ScrollToTop />
        
 
       <Routes>
+      <Route element={<Layout />}>
         <Route
           path="/"
           element={
@@ -169,7 +183,11 @@ const App = () => {
         />
 
         {/* future: standalone page */}
-        <Route path="/page1" element={<Page1 />} />
+        <Route path="/about" element={<Page1 />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<ContactPage />} />
+   
+
         <Route path="/subpage1" element={<SubPage1 />} />
         <Route path="/subpage2" element={<SubPage2 />} />
         <Route path="/subpage3" element={<SubPage3 />} />
@@ -279,6 +297,12 @@ const App = () => {
 <Route path="/policy/DigitalConductDirective" element={<Policy11 />} />
 <Route path="/policy/EthicalSourcingManifesto" element={<Policy12 />} />
 
+
+
+{/* whitepapers */}
+
+<Route path="/whitePapers" element={<WhitepapersPage />} />
+</Route>
       </Routes>
     </div>
   );

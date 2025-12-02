@@ -80,7 +80,7 @@ export default function ContactPopup() {
         aria-label="Contact Ozzuno"
       >
         {/* inner blue gradient pill */}
-        <div className="w-8 h-8 rounded-full hover:cursor-pointer bg-gradient-to-br from-sky-400 via-sky-500 to-indigo-500 flex items-center justify-center text-[15px] shadow-[0_0_14px_rgba(56,189,248,0.8)]">
+        <div className="w-8 h-8 rounded-full hover:cursor-pointer bg-gradient-to-br from-sky-400 via-sky-500 to-indigo-500 flex items-center justify-center text-[28px] shadow-[0_0_14px_rgba(56,189,248,0.8)]">
           ✉︎
         </div>
       </button>
