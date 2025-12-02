@@ -133,14 +133,9 @@ import ContactPage from "./Components/ContactPage";
 import Services from "./pages/Services";
 
 const App = () => {
-  const [openContactFromNav, setOpenContactFromNav] = useState(false);
-
-  const handleOpenContact = () => {
-    setOpenContactFromNav(true);
-  };
+  
   return (
     <div>
-       <Navbar openContact={handleOpenContact} />
        <ScrollToTop />
        
 

@@ -1,13 +1,20 @@
 // src/Layout.jsx
 import Navbar from "./Components/Navbar";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 export default function Layout() {
+  const { pathname } = useLocation();
+
+  // saare policy pages pe navbar hide
+  const isPolicyPage = pathname.startsWith("/policy/");
+
   return (
-    <div>
-      <Navbar />
-      {/* yaha pt-24 navbar ki height ka offset hai */}
-      <main className="pt-24 min-h-screen">
+    <div className="min-h-screen text-slate-500">
+      {/* sirf non-policy pages pe navbar dikhाओ */}
+      {!isPolicyPage && <Navbar />}
+
+      {/* agar navbar hai to pt-24, warna full screen content */}
+      <main className={isPolicyPage ? "" : "pt-24"}>
         <Outlet />
       </main>
     </div>
